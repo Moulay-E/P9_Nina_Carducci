@@ -1,0 +1,9 @@
+# Expire images after a month
+<FilesMatch "\.(jpg|jpeg|png|gif|svg)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# Expire CSS and JS files after a week
+<FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
