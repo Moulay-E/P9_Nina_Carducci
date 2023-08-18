@@ -17,23 +17,33 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    // Essaie d'abord le cache
-    caches.match(event.request).then(cachedResponse => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      // Ensuite, essaie le réseau
-      return fetch(event.request).then(response => {
-        // Et met à jour le cache pour les prochaines fois
-        return caches.open(cacheName).then(cache => {
-          cache.put(event.request, response.clone());
-          return response;
+  // Vérifie que la requête est de type HTTP ou HTTPS
+  if (event.request.url.startsWith('http')) {
+    event.respondWith(
+      // Essaie d'abord le cache
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        // Ensuite, essaie le réseau
+        return fetch(event.request).then(response => {
+          // Assurez-vous que la réponse n'est pas de type 'chrome-extension' avant de la mettre en cache
+          if (!response.url.startsWith('chrome-extension')) {
+            // Et met à jour le cache pour les prochaines fois
+            return caches.open(cacheName).then(cache => {
+              cache.put(event.request, response.clone());
+              return response;
+            });
+          } else {
+            return response; // Retourne simplement la réponse sans la mettre en cache si c'est une extension Chrome
+          }
         });
-      });
-    })
-  );
+      })
+    );
+  }
 });
+
+
 
 
 
