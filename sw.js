@@ -1,7 +1,10 @@
 const cacheName = 'my-cache-v1';
 const assetsToCache = [
-  './assets/images/nina.avif',
+  "./assets/images/instagram.png",
   "./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.avif",
+  "./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.avif",
+  "./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.avif",
+  './assets/images/nina.avif',
   // ... ajoutez toutes les autres ressources que vous souhaitez mettre en cache
 ];
 
