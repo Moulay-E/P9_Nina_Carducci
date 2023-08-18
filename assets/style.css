@@ -1,12 +1,7 @@
-/* @font-face {
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Inter Italic'), local('Inter-Italic'),
-        url('./font/Inter-Medium.woff2') format('woff2'),
-        url('./font/Inter-Medium.woff') format('woff');
-    font-display: swap;
-} */
+
+.w-100{
+height: 100%!important;
+}
 
 body {
 	max-width: 1920px;
