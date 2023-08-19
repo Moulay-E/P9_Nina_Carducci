@@ -1,10 +1,16 @@
 const cacheName = 'my-cache-v1';
 const assetsToCache = [
   "./assets/images/instagram.png",
+  "./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplashMobile.avif",
+  "./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash500.avif",
   "./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplashTiny_Pc.avif",
   "./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.avif",
+  "./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplashMobile.avif",
+  "./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash500.avif",
   "./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplashTiny_Pc.avif",
   "./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.avif",
+  "./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplashMobile.avif",
+  "./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash500.avif",
   "./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplashTiny_Pc.avif",
   "./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.avif",
   './assets/images/nina.avif',
