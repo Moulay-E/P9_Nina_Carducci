@@ -1,6 +1,0 @@
-defaults:
-  - scope:
-      path: ""
-    values:
-      cache:
-        max_age: 604800 # Durée de mise en cache en secondes (1 semaine)
